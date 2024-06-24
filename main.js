@@ -104,5 +104,6 @@ function setAlarm() {
     setTimeout(() => {
         alert('Time to wake up!');
         document.getElementById('settedAlarm').textContent = '';
+        document.getElementById('alarmAudio').play()
     }, timeUntilAlarm);
 }
