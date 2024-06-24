@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Clock-font';
+    src: url(assets/fonts/DS-DIGIB.TTF);
+  }
+
+  /* :root{
+      height: 100%;    
+      background-color: beige;
+  } */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+.btn-color{
+    background-color: #01875f;
+    color: rgb(32, 33, 36);
+    background-color: #00a173;
+} */
+
+body{
+    background-color: beige;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* grid-template-columns: 20% 80%; */
+    width: 700px;
+    height: fit-content;
+    border: 3.3px solid #00a173;
+    border-radius: 2em;
+    gap: 20px;
+    padding: 10px;
+}
+
+ #controls{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: nowrap; */
+    justify-content: space-evenly;
+    margin: 0.25rem;
+    /* background: red; */
+    height: fit-content;
+    gap: 10px;
+ }
+ #controls select, #controls .alarms button{
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 2px 1px rgb(207, 207, 207);
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+ }
+
+.time{
+    background-color: rgb(32, 33, 36);
+    width: 100%;
+    height: 180px;
+    font-family: 'Clock-font';
+    border-radius: 1.6em;
+    padding: 10px;
+    /* color: #01875f;
+    font-family: 'Clock-font';
+    border-radius: 1.6em;
+    background-color: rgb(32, 33, 36); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* font-size: 100%; */
+}
+
+#time{
+    font-size: 100px;
+    color: rgb(3, 170, 162);
+    flex-wrap: nowrap;
+}
+
+
+@media screen and (max-device-width: 768px){
+    .container{
+        flex-direction: column;
+        width: 500px;
+    }
+    #controls{
+        flex-direction: row;
+    }
+    #controls select, #controls .alarms button{
+        width: 200px;
+        height: 50px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+
+/* @media screen and (min-device-width: 1280px) {
+    .backgrounds {
+        background: linear-gradient(to right, rgb(32, 33, 36) 0, rgba(0, 0, 0, 0) 56%), linear-gradient(to top, rgb(32, 33, 36) 0, rgba(0, 0, 0, 0) 56%), linear-gradient(to left, rgb(32, 33, 36) 0, rgba(0, 0, 0, 0) 56%);
+    }
+    #time{
+        font-size: 12.5em;
+    }
+}
+@media screen and (min-device-width: 768px) and (max-device-width: 1279px) {
+    #time {
+        font-size: 9em;
+    }
+}
+@media screen and (min-device-width: 375px) and (max-device-width: 767px) {
+    #time{
+        font-size: 5em;
+    }
+} */
