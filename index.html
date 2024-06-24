@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <div id="controls">
+        <select name="" id="timeZoneSelect">
+          <option  value="24Hr">24Hr Time</option>
+          <option value="12Hr">AM/PM Time</option>
+        </select>
+        <div class="alarms">
+          <button id="setAlarm">
+            set alarm
+            <img src="assets/add_alarm.svg" alt="add alarm icon" srcset="">
+          </button>
+          <!-- <hr> -->
+          <span id="settedAlarm"></span>
+        </div>
+      </div>
+      <div class="time">
+        <p id="time"></p>
+      </div>
+    </div>
+    <dialog>
+      <p>Greetings, one and all!</p>
+      <form method="dialog">
+        <input id="alarmDueTime" required placeholder="Tag for alarm" type="time" class="form-control">
+        <input id="alarmDueDate" placeholder="Due date" type="date" class="form-control">
+        <input type="checkbox" name="" id="playAudio">
+        <button id="alarmDialogAction" onclick="setAlarm()">Set alarm</button>
+      </form>
+    </dialog>
+    <script src="main.js"></script>
+</body>
+</html>
